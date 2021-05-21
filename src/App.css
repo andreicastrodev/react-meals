@@ -17,6 +17,7 @@ body {
 }
 
 .App {
+  padding: 3rem;
   display: grid;
   grid-template-rows: repeat(4, min-content);
   grid-template-columns:
@@ -24,6 +25,7 @@ body {
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr)
     [full-end];
+    background-color:#000026;
 }
 
 .header {
@@ -33,13 +35,11 @@ body {
   align-items: center;
   justify-content: space-between;
 
-  background-color: red;
 }
 
 .landingMessage {
   padding: 1rem;
   grid-column: col-start 2 / col-end 6;
-  background-color: blue;
 }
 
 .content {
