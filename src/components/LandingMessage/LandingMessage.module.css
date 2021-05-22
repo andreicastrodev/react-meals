@@ -5,3 +5,14 @@
   text-align: center;
   letter-spacing: 1px;
 }
+
+.landingMessage_title {
+  font-size: 5rem;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
