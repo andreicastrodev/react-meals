@@ -1,10 +1,10 @@
 import React from "react";
-import CartButton from "./Cart/Cart-btn.component";
+import HeaderCartButton from "./Header-cart-btn.component";
 import styles from "./Header.module.css";
-const Header = () => (
+const Header = ({ onShowCart }) => (
   <React.Fragment>
     <h1 className={styles.headerTitle}>React Meals</h1>
-    <CartButton />
+    <HeaderCartButton onClickShowCart={onShowCart} />
   </React.Fragment>
 );
 

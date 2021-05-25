@@ -1,9 +1,10 @@
 import Header from "./components/Header/Header.component";
 import LandingMessage from "./components/LandingMessage/LandingMessage";
 import CollectionItems from "./components/Collection-items/Collection-items.component";
+import Cart from "./components/Cart/Cart.component";
 import "./App.css";
 import { useState } from "react";
-
+import CartProvider from "./store/Cart-provider";
 function App() {
   const [foodItem, setFoodItem] = useState({
     foods: [
@@ -30,11 +31,25 @@ function App() {
       },
     ],
   });
+
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsShown(true);
+    console.log(`i am clicked`);
+  };
+
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+  };
+
   const { foods } = foodItem;
   return (
-    <div className="App">
+    <CartProvider className="App">
       <div className="header">
-        <Header />
+        {cartIsShown ? <Cart onHideCart={hideCartHandler} /> : null}
+
+        <Header onShowCart={showCartHandler} />
       </div>
       <div className="landing">
         <div className="main_image"></div>
@@ -46,7 +61,7 @@ function App() {
       <div className="content">
         <CollectionItems items={foods} />
       </div>
-    </div>
+    </CartProvider>
   );
 }
 
