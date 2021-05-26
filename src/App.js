@@ -45,21 +45,22 @@ function App() {
 
   const { foods } = foodItem;
   return (
-    <CartProvider className="App">
-      <div className="header">
-        {cartIsShown ? <Cart onHideCart={hideCartHandler} /> : null}
+    <CartProvider>
+      <div className="App">
+        <div className="header">
+          {cartIsShown ? <Cart onHideCart={hideCartHandler} /> : null}
 
-        <Header onShowCart={showCartHandler} />
-      </div>
-      <div className="landing">
-        <div className="main_image"></div>
-        <div className="landingMessage">
-          <LandingMessage />
+          <Header onShowCart={showCartHandler} />
         </div>
-      </div>
-
-      <div className="content">
-        <CollectionItems items={foods} />
+        <div className="landing">
+          <div className="main_image"></div>
+          <div className="landingMessage">
+            <LandingMessage />
+          </div>
+        </div>
+        <div className="content">
+          <CollectionItems items={foods} />
+        </div>{" "}
       </div>
     </CartProvider>
   );
