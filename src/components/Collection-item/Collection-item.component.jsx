@@ -10,7 +10,6 @@ const CollectionItem = ({ title, price, description, id }) => {
   const cartCtx = useContext(CartContext);
 
   const addToCardHanadler = (amount) => {
-    console.log(amount);
     cartCtx.addItem({
       id: id,
       name: title,
