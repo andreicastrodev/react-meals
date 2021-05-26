@@ -23,8 +23,8 @@ function App() {
         quantity: 0,
       },
       {
-        title: "Schnitzel",
-        description: "A german specialty!",
+        title: "Cake",
+        description: "Sweets!",
         price: 44,
         id: 3,
         quantity: 0,
