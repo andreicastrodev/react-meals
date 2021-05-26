@@ -3,7 +3,7 @@ import CartContext from "../../store/cart-context";
 import styles from "./Collection-item.module.css";
 
 const CollectionItem = ({ title, price, description, id }) => {
-  const [setAmountIsValid] = useState(false);
+  const [amountiSValid,setAmountIsValid] = useState(false);
 
   const amountInputRef = useRef();
 
